@@ -15,13 +15,14 @@ router.post("/createUser", async (req, res) => {
     isApproved: false,
     isLocked: false,
   })
-    .then(res => {
-      return res.status(200).json({ message: res });
+    .then((result) => {
+      return res.status(200).json({ message: result });
     })
-    .catch(err => {
+    .catch((err) => {
       return res.status(500).json({ message: err });
     });
 });
+
 router.get("/getUsers", (req, res) => {});
 
 export default router;
